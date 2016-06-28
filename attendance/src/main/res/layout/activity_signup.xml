@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/email_icon_signup"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/email_icon" />
+
+        <com.xuan.attendance.views.EmailAutoCompleteTextView
+            android:maxLength="60"
+            android:id="@+id/email_signup"
+            style="@style/signup_h_w"
+            android:layout_alignBottom="@id/email_icon_signup"
+            android:layout_toRightOf="@id/email_icon_signup"
+            android:drawableRight="@drawable/delete"
+            android:hint="@string/email_hit"
+            android:background="@null"/>
+        <View
+            android:layout_alignRight="@id/email_signup"
+            android:layout_alignLeft="@id/email_icon_signup"
+            android:layout_below="@id/email_icon_signup"
+            style="@style/Lines"
+            />
+        <ImageView
+            android:id="@+id/password_icon_signup"
+            style="@style/iamge_icon"
+            android:layout_below="@id/email_signup"
+            android:src="@drawable/password_icon" />
+
+        <com.xuan.attendance.views.EditTextWithDel
+            android:id="@+id/password_signup"
+            style="@style/signup_h_w"
+            android:layout_alignBottom="@id/password_icon_signup"
+            android:layout_toRightOf="@id/password_icon_signup"
+            android:drawableRight="@drawable/delete"
+            android:hint="@string/pwd_hint"
+            android:inputType="textPassword"
+            android:maxLength="18"
+            android:background="@null"/>
+        <View
+            android:layout_alignRight="@id/password_signup"
+            android:layout_alignLeft="@id/password_icon_signup"
+            android:layout_below="@id/password_signup"
+            style="@style/Lines"
+            />
+        <ImageView
+            android:id="@+id/password_icon1"
+            style="@style/iamge_icon"
+            android:layout_below="@id/password_signup"
+            android:src="@drawable/password_icon" />
+
+        <com.xuan.attendance.views.EditTextWithDel
+            android:maxLength="18"
+            android:id="@+id/password_signup_again"
+            style="@style/signup_h_w"
+            android:layout_alignBottom="@id/password_icon1"
+            android:layout_toRightOf="@id/password_icon_signup"
+            android:drawableRight="@drawable/delete"
+            android:hint="@string/pwd_hint_again"
+            android:inputType="textPassword"
+            android:background="@null"/>
+        <View
+            android:layout_alignRight="@id/password_signup_again"
+            android:layout_alignLeft="@id/password_icon1"
+            android:layout_below="@id/password_signup_again"
+            style="@style/Lines"
+            />
+        <TextView
+            android:id="@+id/signup"
+            android:text="@string/signup"
+            style="@style/signup_bt" />
+    </RelativeLayout>
+</ScrollView>

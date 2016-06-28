@@ -1,0 +1,43 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "22.0.1"
+
+    //bmob**兼容Android6.0系统所需，如果这句话报错，可将其导入到libs文件夹下面**
+    useLibrary 'org.apache.http.legacy'
+
+    defaultConfig {
+        applicationId "com.xuan.attendance"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:design:23.4.0'
+    //bmob-sdk：Bmob的android sdk包，包含了Bmob的数据存储、文件等服务，以下是最新的bmob-sdk:
+    //3.4.7依赖，其他诸如`org.apache.http.legacy`,如果你需要兼容Android6.0可自行添加
+    //注：3.4.7的SDK将数据的加解密实现转移到了底层so中，请务必导入`libbmob.so`，否则无法使用BmobSDK。
+    compile 'cn.bmob.android:bmob-sdk:3.4.7'
+    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+    compile 'com.squareup.okio:okio:1.7.0'
+    compile files('libs/AMap_2DMap_V2.9.0_20160525.jar')
+    compile files('libs/AMap_Location_V2.5.0_20160526.jar')
+    compile files('libs/SuperIDSDK.jar')
+    compile files('libs/AMap_Search_V3.2.1_20160308.jar')
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:v1.7.4'
+    //列表
+    compile 'com.google.code.gson:gson:2.6.2'
+}

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:layout_marginLeft="15dp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:id="@+id/email_icon_login"
+                android:src="@drawable/email_icon" />
+
+            <com.xuan.attendance.views.EmailAutoCompleteTextView
+                android:id="@+id/email_login"
+                style="@style/login_et"
+                android:layout_alignBottom="@id/email_icon_login"
+                android:layout_toRightOf="@id/email_icon_login"
+                android:drawableRight="@drawable/delete"
+                android:hint="@string/email_hit"
+                android:maxLength="60"
+                android:background="@null"/>
+            <View
+                android:layout_alignRight="@id/email_login"
+                android:layout_alignLeft="@id/email_icon_login"
+                android:layout_below="@id/email_login"
+                style="@style/Lines"/>
+            <ImageView
+                android:id="@+id/password_icon_login"
+                style="@style/iamge_icon"
+                android:layout_below="@id/email_login"
+                android:src="@drawable/password_icon" />
+
+            <com.xuan.attendance.views.EditTextWithDel
+                android:id="@+id/password_login"
+                style="@style/login_et"
+                android:layout_alignBottom="@id/password_icon_login"
+                android:layout_toRightOf="@id/password_icon_login"
+                android:drawableRight="@drawable/delete"
+                android:hint="@string/pwd_hint"
+                android:inputType="textPassword"
+                android:maxLength="18"
+                android:background="@null"/>
+            <View
+                android:layout_alignRight="@id/email_login"
+                android:layout_alignLeft="@id/email_icon_login"
+                android:layout_below="@id/password_login"
+                style="@style/Lines"/>
+            <TextView
+                android:id="@+id/login"
+                style="@style/bt_s_l_f"
+                android:layout_below="@id/password_login"
+                android:layout_margin="10dp"
+                android:text="@string/login" />
+
+            <TextView
+                android:id="@+id/signup_login_page"
+                style="@style/bt_s_l_f"
+                android:layout_below="@id/login"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/signup" />
+
+            <TextView
+                android:id="@+id/forgetpwd"
+                style="@style/bt_s_l_f"
+                android:layout_below="@id/signup_login_page"
+                android:layout_margin="10dp"
+                android:background="@drawable/bt_circular_bead"
+                android:text="@string/resetpwd" />
+            <TextView
+                android:id="@+id/superidlogin"
+                style="@style/bt_s_l_f"
+                android:layout_below="@id/forgetpwd"
+                android:layout_margin="10dp"
+                android:background="@drawable/bt_circular_bead"
+                android:text="@string/superidlogin" />
+        </RelativeLayout>
+
+</ScrollView>

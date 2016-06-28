@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="130dip"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_gravity="center"
+    android:foreground="?android:attr/selectableItemBackground"
+    card_view:cardBackgroundColor="@color/item_bg"
+    card_view:cardCornerRadius="4dp"
+    card_view:cardElevation="2dp"
+    card_view:cardUseCompatPadding="true">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:padding="10dp"
+        android:layout_gravity="center"
+     >
+
+        <ImageView
+            android:id="@+id/img_head"
+            android:layout_margin="@dimen/smallSpace"
+            android:layout_width="@dimen/avatarSize"
+            android:layout_height="@dimen/avatarSize"
+            android:layout_centerInParent="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/userhead"
+            />
+
+        <TextView
+            android:id="@+id/txt_name"
+            style="@style/tweetName"
+            android:layout_marginBottom="1dp"
+            android:layout_toRightOf="@+id/img_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开会"/>
+
+        <TextView
+            android:id="@+id/txt_msg"
+            style="@style/tweetText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/darker_gray"
+            android:text="12班准时到"
+            android:layout_alignBottom="@+id/img_head"
+            android:layout_toRightOf="@+id/img_head"
+            android:layout_toEndOf="@+id/img_head" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="23:00"
+            android:id="@+id/txt_time"
+            android:layout_marginRight="13dp"
+            android:layout_marginEnd="13dp"
+            android:layout_alignTop="@+id/txt_timerange"
+            android:layout_toLeftOf="@+id/txt_timerange"
+            android:layout_toStartOf="@+id/txt_timerange" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="大学城"
+            android:id="@+id/txt_location"
+            android:ellipsize="marquee"
+            android:scrollHorizontally="true"
+            android:layout_below="@+id/txt_name"
+            android:layout_toRightOf="@+id/img_head"
+            android:layout_toEndOf="@+id/img_head" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="张三"
+            android:id="@+id/txt_username"
+            android:layout_alignParentBottom="true"
+            android:layout_alignLeft="@+id/img_head"
+            android:layout_alignStart="@+id/img_head" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="10分钟内"
+            android:id="@+id/txt_timerange"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已签到人数:100人"
+            android:id="@+id/txt_number"
+            android:layout_alignTop="@+id/txt_username"
+            android:layout_toLeftOf="@+id/btn_time_attend"
+            android:layout_toStartOf="@+id/btn_time_attend" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点击签到"
+            android:id="@+id/btn_time_attend"
+            android:layout_alignBottom="@+id/txt_number"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/txt_msg" />
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

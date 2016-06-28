@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">Attendance</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="email_hit">请输入邮箱地址</string>
+    <string name="pwd_hint">请输入密码</string>
+    <string name="pwd_hint_again">请再次输入密码</string>
+    <string name="login">登录</string>
+    <string name="signup">注册</string>
+    <string name="loginrun">登录中.....</string>
+    <string name="signrun">注册中.....</string>
+    <string name="sendemailrun">邮件发送中.....</string>
+    <string name="usernameorpassworderror">用户名不存在或密码错误</string>
+    <string name="resetpwd">找回密码</string>
+    <string name="email_get_password_send_success">邮件发送成功</string>
+    <string name="email_or_pwd_isEmpty">请输入相关信息</string>
+    <string name="email_error">电子邮件格式错误</string>
+    <string name="please_i_e_a">请输入电子邮箱</string>
+    <string name="please_once_a">发送失败，请再次输入邮箱</string>
+    <string name="username">用户名</string>
+    <string name="already_taken">已经存在</string>
+    <string name="email_no_null">电子邮箱不能为空\n</string>
+    <string name="pwd_no_null">密码不能为空\n</string>
+    <string name="pwd_again_no_null">重复密码不能为空\n</string>
+    <string name="e_a_n_f">电子邮件格式错误</string>
+
+
+    <string name="superidlogin">刷脸登录</string>
+    <string name="locationing">定位中....</string>
+    <string name="faceVerify">刷脸验证</string>
+    <string name="faceBundle">点击绑定</string>
+    <string name="attEvent">签到活动</string>
+    <string name="eventList">活动列表</string>
+    <string name="attendList">签到列表</string>
+
+
+    <string-array name="array_timerange">
+        <item>20分钟后</item>
+        <item>40分钟后</item>
+        <item>60分钟后</item>
+    </string-array>
+    <string-array name="array_locationrange">
+        <item>100米</item>
+        <item>500米</item>
+        <item>1千米</item>
+        <item>2千米</item>
+        <item>5千米</item>
+    </string-array>
+
+</resources>
